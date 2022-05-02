@@ -3,8 +3,20 @@ import { Select } from "./Styled";
 
 export const Products = () => {
   useEffect(() => {
-    // fetch ProductsData using redux-thunk on every mount
+      Data.map((elem) => {
+        return (
+            <div>
+                <h4>{elem.brand}</h4>
+                <h4>{elem.title}</h4>
+                <img src={elem.image} />
+                <p>{elem.category}</p>
+                <h4>{elem.price}</h4>
+            </div>
+        )
+        
+      })
   }, []);
+
   const handleSort = (e) => {
     // dispatch sort products on change
   };
